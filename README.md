@@ -27,14 +27,18 @@ Notes
 
 Scoring
 
-1.  40 points based on functionality
+1.  Maximum score for this project is 65 out of 60 points.
+2.  40 points based on functionality
     1.  You will receive zero points if the program does not compile.  It is imperative that the program compiles.
     2.  Points are broken down as follows:
-        1.  10 points - list of employees in the system functionality
-        2.  10 points - startup and initialization functionality
-        2.  10 points - update of an employee hours functionality
-        3.  10 points - process payroll functionality
-2.  20 points based on team feedback
+        1.  5 points - startup and initialization functionality
+        2.  5 points - control loop functionality
+        3.  5 points - list of employees in the system functionality
+        4.  5 points - update of an employee hours functionality
+        5.  5 points - process payroll functionality
+        6.  5 points - overall flow and process of the system
+        7.  10 points - correctness of the use of Model View Controller architecture
+3.  20 points based on team feedback
     1.  You will be asked to provide a 1 to 10 score on how your teammates contributed to the project.  The sum of these scores makes up this portion
 
 
