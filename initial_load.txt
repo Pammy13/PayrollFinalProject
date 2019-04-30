@@ -1,0 +1,10 @@
+1,Bob Camden,15.00
+2,Jill Thomas,11.50
+3,Mary Green,22.75
+4,Gus O'Toole,18.25
+5,Manuel Cortez,11.50
+6,Jim Thompson,15.00
+7,Carrie Swetson,23.25
+8,Jack Donaldson,36.50
+9,Doris Van Huesen,50.75
+10,Elliot Ness,42.00
