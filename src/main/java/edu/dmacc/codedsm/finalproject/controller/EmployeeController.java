@@ -1,7 +1,7 @@
 package edu.dmacc.codedsm.finalproject.controller;
 
 
-import edu.dmacc.codedsm.finalproject.Employee;
+import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 import edu.dmacc.codedsm.finalproject.service.EmployeeService;
 

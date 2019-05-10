@@ -1,6 +1,6 @@
 package edu.dmacc.codedsm.finalproject.service;
 
-import edu.dmacc.codedsm.finalproject.Employee;
+import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package edu.dmacc.codedsm.finalproject;
+package edu.dmacc.codedsm.finalproject.model;
 
 public class Employee {
     private String idNumber;

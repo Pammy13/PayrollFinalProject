@@ -1,7 +1,7 @@
 package edu.dmacc.codedsm.finalproject;
 
 import edu.dmacc.codedsm.finalproject.controller.DataLoaderController;
-import edu.dmacc.codedsm.finalproject.controller.EmployeeController;
+import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 import edu.dmacc.codedsm.finalproject.view.AllEmployeeView;
 

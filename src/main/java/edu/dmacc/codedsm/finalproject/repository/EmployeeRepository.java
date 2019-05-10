@@ -1,6 +1,6 @@
 package edu.dmacc.codedsm.finalproject.repository;
 
-import edu.dmacc.codedsm.finalproject.Employee;
+import edu.dmacc.codedsm.finalproject.model.Employee;
 
 import java.util.HashMap;
 
