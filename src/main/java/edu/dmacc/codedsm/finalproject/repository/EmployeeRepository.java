@@ -1,15 +1,14 @@
-package edu.dmacc.codedsm.finalprojectfragments.repository;
+package edu.dmacc.codedsm.finalproject.repository;
 
-import edu.dmacc.codedsm.finalprojectfragments.Employee;
+import edu.dmacc.codedsm.finalproject.Employee;
 
 import java.util.HashMap;
 
-public class EmployeeRepository {
+public class EmployeeRepository{
 
     private static HashMap<String, Employee> employees = new HashMap<>();
 
-    public static HashMap<String, Employee> getEmployees() {
-        return employees;
+    public static HashMap<String, Employee> getEmployees() {return employees;
     }
 
     public static void setEmployees(HashMap<String, Employee> employees) {

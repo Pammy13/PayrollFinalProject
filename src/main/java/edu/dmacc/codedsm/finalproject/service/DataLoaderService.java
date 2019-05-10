@@ -1,7 +1,7 @@
-package edu.dmacc.codedsm.finalprojectfragments.service;
+package edu.dmacc.codedsm.finalproject.service;
 
-import edu.dmacc.codedsm.finalprojectfragments.Employee;
-import edu.dmacc.codedsm.finalprojectfragments.repository.EmployeeRepository;
+import edu.dmacc.codedsm.finalproject.Employee;
+import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

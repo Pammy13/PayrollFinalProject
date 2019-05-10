@@ -1,6 +1,6 @@
-package edu.dmacc.codedsm.finalprojectfragments.controller;
+package edu.dmacc.codedsm.finalproject.controller;
 
-import edu.dmacc.codedsm.finalprojectfragments.repository.EmployeeRepository;
+import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
 public class PayrollController {
 
