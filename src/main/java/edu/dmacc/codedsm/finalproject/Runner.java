@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class Runner {
 
     public static void main(String[] args) throws IOException {
-        EmployeeRepository employeeRepository = new EmployeeRepository();
         DataLoaderController.loadEmployeeData();
         displayUserOptions();
 
