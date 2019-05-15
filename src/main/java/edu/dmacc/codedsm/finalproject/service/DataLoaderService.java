@@ -43,6 +43,8 @@ public class DataLoaderService {
         return employee;
     }
 
+    public static interface PayrollService{
+    }
 }
 
 

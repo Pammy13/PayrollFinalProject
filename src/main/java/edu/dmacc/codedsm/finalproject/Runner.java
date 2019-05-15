@@ -2,11 +2,11 @@ package edu.dmacc.codedsm.finalproject;
 
 import edu.dmacc.codedsm.finalproject.controller.DataLoaderController;
 import edu.dmacc.codedsm.finalproject.controller.EmployeeController;
-import edu.dmacc.codedsm.finalproject.controller.PayrollController;
-import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
-import edu.dmacc.codedsm.finalproject.view.AllEmployeeView;
+import edu.dmacc.codedsm.finalproject.controller.PayrollControllerImpl;
+import edu.dmacc.codedsm.finalproject.view.AllEmployeeViewImpl;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Runner {
@@ -28,13 +28,15 @@ public class Runner {
             String userAnswer = scanner.next();
 
             if (userAnswer.equals("1")) {
-                AllEmployeeView.displayAllEmployees();
+                AllEmployeeViewImpl allEmployeeView = new AllEmployeeViewImpl();
+                allEmployeeView.setEmployees(new ArrayList(EmployeeController.gatherEmployees()));
+                allEmployeeView.display();
 
             } else if (userAnswer.equals("2")) {
                 EmployeeController.updateHours();
 
             } else if (userAnswer.equals("3")) {
-                PayrollController.processPayroll();
+                PayrollControllerImpl.processPayroll();
 
             } else if (userAnswer.equals("4")) {
                 isRunning = false;
