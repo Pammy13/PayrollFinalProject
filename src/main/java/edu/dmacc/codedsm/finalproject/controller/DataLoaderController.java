@@ -7,6 +7,10 @@ import edu.dmacc.codedsm.finalproject.service.DataLoaderService;
 
 public class DataLoaderController{
 
+    public DataLoaderController( EmployeeRepository employeeRepository ) {
+
+    }
+
     public static void loadEmployeeData() {
         DataLoaderService.readFile();
     }

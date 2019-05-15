@@ -3,6 +3,7 @@ package edu.dmacc.codedsm.finalproject;
 import edu.dmacc.codedsm.finalproject.controller.DataLoaderController;
 import edu.dmacc.codedsm.finalproject.controller.EmployeeController;
 import edu.dmacc.codedsm.finalproject.controller.PayrollControllerImpl;
+import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 import edu.dmacc.codedsm.finalproject.view.AllEmployeeViewImpl;
 
 import java.io.IOException;
@@ -12,7 +13,9 @@ import java.util.Scanner;
 public class Runner {
 
     public static void main(String[] args) throws IOException {
-        DataLoaderController.loadEmployeeData();
+        EmployeeRepository employeeRepository = new EmployeeRepository();
+        DataLoaderController dataLoaderController = new DataLoaderController(employeeRepository);
+        dataLoaderController.loadEmployeeData();
         displayUserOptions();
 
     }
