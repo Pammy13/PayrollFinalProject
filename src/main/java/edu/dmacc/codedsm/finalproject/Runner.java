@@ -7,7 +7,6 @@ import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 import edu.dmacc.codedsm.finalproject.view.AllEmployeeViewImpl;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Runner {
@@ -31,8 +30,9 @@ public class Runner {
             String userAnswer = scanner.next();
 
             if (userAnswer.equals("1")) {
+                EmployeeController employeeController = new EmployeeController();
+                employeeController.gatherEmployees();
                 AllEmployeeViewImpl allEmployeeView = new AllEmployeeViewImpl();
-                allEmployeeView.setEmployees(new ArrayList(EmployeeController.gatherEmployees()));
                 allEmployeeView.display();
 
             } else if (userAnswer.equals("2")) {

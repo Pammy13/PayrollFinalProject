@@ -5,18 +5,18 @@ import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class DataLoaderService {
 
     private static final String FILE_NAME = "initial_load.txt";
 
     public static void readFile() {
-
+        BufferedReader bufferReader = null;
         try {
             FileReader inputFile = new FileReader(FILE_NAME);
-            BufferedReader bufferReader = new BufferedReader(inputFile);
+            bufferReader = new BufferedReader(inputFile);
             String line;
-
 
             while ((line = bufferReader.readLine()) != null) {
 
@@ -24,10 +24,15 @@ public class DataLoaderService {
                 EmployeeRepository.saveEmployee(employee);
             }
 
-            bufferReader.close();
         } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-
     }
 
     private static Employee createEmployee(String line) {
