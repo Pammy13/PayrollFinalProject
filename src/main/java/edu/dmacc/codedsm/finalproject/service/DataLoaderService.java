@@ -35,6 +35,7 @@ public class DataLoaderService {
         }
     }
 
+
     private static Employee createEmployee(String line) {
         String idNumber = line.substring(0, line.indexOf(","));
         String restOfString = line.substring(line.indexOf(",") + 1);
