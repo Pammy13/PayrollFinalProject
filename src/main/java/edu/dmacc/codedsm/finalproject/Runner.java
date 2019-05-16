@@ -37,9 +37,11 @@ public class Runner {
 
             } else if (userAnswer.equals("2")) {
                 EmployeeController.updateHours();
+                //EmployeeController employeeController = new EmployeeController(EmployeeController.updateHours();
 
             } else if (userAnswer.equals("3")) {
                 PayrollControllerImpl.processPayroll();
+
 
             } else if (userAnswer.equals("4")) {
                 isRunning = false;
