@@ -11,7 +11,7 @@ public class AllEmployeeViewImpl implements EmployeeView{
     EmployeeViewImpl employeeView = new EmployeeViewImpl();
 
     public void display() {
-        for (Employee employee : EmployeeController.gatherEmployees()) {
+        for (Employee employee : employees) {
             employeeView.setEmployee(employee);
             employeeView.display();
 

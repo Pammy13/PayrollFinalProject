@@ -1,8 +1,9 @@
 package edu.dmacc.codedsm.finalproject.service;
 
-public interface PayrollService{
+import edu.dmacc.codedsm.finalproject.repository.EmployeeRepositoryv2;
 
-        public void display();
-    }
+public interface PayrollService{
+    void processPayrolls( EmployeeRepositoryv2 employeeRepository) throws Exception;
+}
 
 
