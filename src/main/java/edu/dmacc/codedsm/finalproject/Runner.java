@@ -19,10 +19,7 @@ public class Runner {
         dataLoaderController.loadEmployeeRepository();
 
         EmployeeService employeeService = new EmployeeService(employeeRepository);
-        //EmployeeController employeeController = new EmployeeController(employeeRepository, employeeService);
-
         PayrollService payrollService = new PayrollServiceImpl(employeeRepository);
-        //PayrollController payrollController = new PayrollControllerImpl(employeeRepository, payrollService);
 
         ViewController viewController = new ViewController();
         InputView view = viewController.getDisplay();

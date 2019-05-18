@@ -40,7 +40,7 @@ public class DataLoaderService {
         }
     }
 
-    private Employee createEmployee(String line) {
+    protected Employee createEmployee(String line) {
         String idNumber = line.substring(0, line.indexOf(","));
         String restOfString = line.substring(line.indexOf(",") + 1);
         String name = restOfString.substring(0, restOfString.indexOf(","));
