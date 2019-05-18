@@ -10,8 +10,13 @@ import java.io.IOException;
 public class DataLoaderService {
 
     private static final String FILE_NAME = "initial_load.txt";
+    private EmployeeRepository employeeRepository;
 
-    public void loadEmployees(EmployeeRepository employeeRepository){
+    public DataLoaderService(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+
+    public void loadEmployees(){
         BufferedReader bufferReader = null;
         try {
             FileReader inputFile = new FileReader(FILE_NAME);

@@ -14,9 +14,7 @@ public class AllEmployeeViewImpl implements EmployeeView{
         for (Employee employee : employees) {
             employeeView.setEmployee(employee);
             employeeView.display();
-
         }
-
     }
 
     public void setEmployees( List <Employee> employees ) {
