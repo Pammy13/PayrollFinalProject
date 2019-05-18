@@ -2,12 +2,33 @@ package edu.dmacc.codedsm.finalproject.service;
 
 import edu.dmacc.codedsm.finalproject.model.Employee;
 import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
+import edu.dmacc.codedsm.finalproject.view.AllEmployeeViewImpl;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EmployeeService{
 
-    public void updateEmployeeHoursWorked( String id, EmployeeRepository employeeRepository ) {
+    EmployeeRepository employeeRepository;
+
+    public EmployeeService(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+
+    public void displayAllEmployees(){
+        AllEmployeeViewImpl allEmployeeView = new AllEmployeeViewImpl();
+        allEmployeeView.setEmployees(new ArrayList(employeeRepository.getAllEmployees()));
+        allEmployeeView.display();
+    }
+
+    public void updateHoursV2(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter employee ID number: ");
+        String id = scanner.next();
+        updateEmployeeHoursWorked(id);
+    }
+
+    public void updateEmployeeHoursWorked( String id ) {
 
         if (employeeRepository.getEmployees().containsKey(id)) {
             System.out.println("Enter hours worked: ");

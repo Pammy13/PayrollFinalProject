@@ -18,16 +18,15 @@ public class Runner {
         DataLoaderController dataLoaderController = new DataLoaderController(dataLoaderService);
         dataLoaderController.loadEmployeeRepository();
 
-        EmployeeService employeeService = new EmployeeService();
-        EmployeeController employeeController = new EmployeeController(employeeRepository, employeeService);
+        EmployeeService employeeService = new EmployeeService(employeeRepository);
+        //EmployeeController employeeController = new EmployeeController(employeeRepository, employeeService);
 
-        PayrollService payrollService = new PayrollServiceImpl();
-        PayrollController payrollController = new PayrollControllerImpl(employeeRepository, payrollService);
+        PayrollService payrollService = new PayrollServiceImpl(employeeRepository);
+        //PayrollController payrollController = new PayrollControllerImpl(employeeRepository, payrollService);
 
         ViewController viewController = new ViewController();
         InputView view = viewController.getDisplay();
-        view.displayUserOptionsV2(employeeController, payrollController);
-
+        view.displayUserOptionsV2(employeeService, payrollService);
     }
 
 }

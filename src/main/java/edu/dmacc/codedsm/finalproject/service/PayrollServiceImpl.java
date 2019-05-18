@@ -6,8 +6,15 @@ import edu.dmacc.codedsm.finalproject.repository.EmployeeRepository;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-public class PayrollServiceImpl implements PayrollService{
-    public void processPayrolls( EmployeeRepository employeeRepository ) throws Exception{
+public class PayrollServiceImpl implements PayrollService {
+
+    EmployeeRepository employeeRepository;
+
+    public PayrollServiceImpl(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+        }
+
+    public void processPayrolls( ) throws Exception{
         FileWriter fileWriter = new FileWriter("payroll_results.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
 

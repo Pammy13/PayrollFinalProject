@@ -1,14 +1,16 @@
 package edu.dmacc.codedsm.finalproject.view;
 
-import edu.dmacc.codedsm.finalproject.controller.EmployeeController;
-import edu.dmacc.codedsm.finalproject.controller.PayrollController;
+
+
+import edu.dmacc.codedsm.finalproject.service.EmployeeService;
+import edu.dmacc.codedsm.finalproject.service.PayrollService;
 
 import java.util.Scanner;
 
 public class InputView{
 
-    public static void displayUserOptionsV2( EmployeeController employeeController,
-                                             PayrollController payrollController) throws Exception {
+    public static void displayUserOptionsV2( EmployeeService employeeService,
+                                             PayrollService payrollService) throws Exception {
         boolean isRunning = true;
         Scanner scanner = new Scanner(System.in);
         while (isRunning) {
@@ -19,13 +21,13 @@ public class InputView{
             String userAnswer = scanner.next();
 
             if (userAnswer.equals("1")) {
-                employeeController.displayAllEmployees();
+                employeeService.displayAllEmployees();
 
             } else if (userAnswer.equals("2")) {
-                employeeController.updateHoursV2();
+                employeeService.updateHoursV2();
 
             } else if (userAnswer.equals("3")) {
-                payrollController.processPayrolls();
+                payrollService.processPayrolls();
 
             } else if (userAnswer.equals("4")) {
                 isRunning = false;
