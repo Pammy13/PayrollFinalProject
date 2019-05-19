@@ -1,7 +1,5 @@
 package edu.dmacc.codedsm.finalproject.view;
 
-
-
 import edu.dmacc.codedsm.finalproject.service.EmployeeService;
 import edu.dmacc.codedsm.finalproject.service.PayrollService;
 
@@ -9,8 +7,7 @@ import java.util.Scanner;
 
 public class InputView{
 
-    public static void displayUserOptionsV2( EmployeeService employeeService,
-                                             PayrollService payrollService) throws Exception {
+    public static void displayUserOptions( EmployeeService employeeService, PayrollService payrollService ) throws Exception {
         boolean isRunning = true;
         Scanner scanner = new Scanner(System.in);
         while (isRunning) {
@@ -39,4 +36,5 @@ public class InputView{
             }
         }
     }
+
 }

@@ -1,6 +1,6 @@
 package edu.dmacc.codedsm.finalproject.model;
 
-public class Employee {
+public class Employee{
     private String idNumber;
     private String name;
     private Double hourlyRate;
@@ -20,7 +20,7 @@ public class Employee {
         return idNumber;
     }
 
-    public void setIdNumber(String idNumber) {
+    public void setIdNumber( String idNumber ) {
         this.idNumber = idNumber;
     }
 
@@ -28,7 +28,7 @@ public class Employee {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName( String name ) {
         this.name = name;
     }
 
@@ -46,5 +46,6 @@ public class Employee {
 
     public void setHoursWorked( Double hoursWorked ) {
         this.hoursWorked = hoursWorked;
+
     }
 }

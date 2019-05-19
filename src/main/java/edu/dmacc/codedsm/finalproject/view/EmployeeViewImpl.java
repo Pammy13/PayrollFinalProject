@@ -2,8 +2,6 @@ package edu.dmacc.codedsm.finalproject.view;
 
 import edu.dmacc.codedsm.finalproject.model.Employee;
 
-import java.util.List;
-
 public class EmployeeViewImpl implements EmployeeView{
 
     private Employee employee;
@@ -16,11 +14,10 @@ public class EmployeeViewImpl implements EmployeeView{
         System.out.println();
     }
 
-    public void setEmployee (Employee employee) {
-          this.employee = employee;
+    public void setEmployee( Employee employee ) {
+        this.employee = employee;
 
     }
-
 
 }
 

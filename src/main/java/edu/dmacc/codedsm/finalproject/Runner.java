@@ -8,11 +8,9 @@ import edu.dmacc.codedsm.finalproject.service.PayrollService;
 import edu.dmacc.codedsm.finalproject.service.PayrollServiceImpl;
 import edu.dmacc.codedsm.finalproject.view.InputView;
 
-import java.util.Scanner;
+public class Runner{
 
-public class Runner {
-
-    public static void main(String[] args) throws Exception {
+    public static void main( String[] args ) throws Exception {
         EmployeeRepository employeeRepository = new EmployeeRepository();
         DataLoaderService dataLoaderService = new DataLoaderService(employeeRepository);
         DataLoaderController dataLoaderController = new DataLoaderController(dataLoaderService);
@@ -23,7 +21,7 @@ public class Runner {
 
         ViewController viewController = new ViewController();
         InputView view = viewController.getDisplay();
-        view.displayUserOptionsV2(employeeService, payrollService);
+        view.displayUserOptions(employeeService, payrollService);
     }
 
 }

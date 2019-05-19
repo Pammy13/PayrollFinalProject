@@ -2,7 +2,6 @@ package edu.dmacc.codedsm.finalproject.view;
 
 import edu.dmacc.codedsm.finalproject.model.Employee;
 
-import java.util.Collections;
 import java.util.List;
 
 public class AllEmployeeViewImpl implements EmployeeView{
@@ -16,8 +15,8 @@ public class AllEmployeeViewImpl implements EmployeeView{
         }
     }
 
-    public void setEmployees( List <Employee> employees ) {
+    public void setEmployees( List<Employee> employees ) {
         this.employees = employees;
-
     }
+
 }

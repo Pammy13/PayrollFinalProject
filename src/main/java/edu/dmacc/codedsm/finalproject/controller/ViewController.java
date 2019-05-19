@@ -7,4 +7,5 @@ public class ViewController{
     public InputView getDisplay() {
         return new InputView();
     }
+
 }

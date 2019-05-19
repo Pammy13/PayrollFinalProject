@@ -7,16 +7,16 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class DataLoaderService {
+public class DataLoaderService{
 
     private static final String FILE_NAME = "initial_load.txt";
     private EmployeeRepository employeeRepository;
 
-    public DataLoaderService(EmployeeRepository employeeRepository) {
+    public DataLoaderService( EmployeeRepository employeeRepository ) {
         this.employeeRepository = employeeRepository;
     }
 
-    public void loadEmployees(){
+    public void loadEmployees() {
         BufferedReader bufferReader = null;
         try {
             FileReader inputFile = new FileReader(FILE_NAME);
@@ -40,7 +40,7 @@ public class DataLoaderService {
         }
     }
 
-    protected Employee createEmployee(String line) {
+    protected Employee createEmployee( String line ) {
         String idNumber = line.substring(0, line.indexOf(","));
         String restOfString = line.substring(line.indexOf(",") + 1);
         String name = restOfString.substring(0, restOfString.indexOf(","));

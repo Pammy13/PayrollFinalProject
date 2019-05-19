@@ -11,17 +11,17 @@ public class EmployeeService{
 
     EmployeeRepository employeeRepository;
 
-    public EmployeeService(EmployeeRepository employeeRepository) {
+    public EmployeeService( EmployeeRepository employeeRepository ) {
         this.employeeRepository = employeeRepository;
     }
 
-    public void displayAllEmployees(){
+    public void displayAllEmployees() {
         AllEmployeeViewImpl allEmployeeView = new AllEmployeeViewImpl();
         allEmployeeView.setEmployees(new ArrayList(employeeRepository.getAllEmployees()));
         allEmployeeView.display();
     }
 
-    public void updateHoursV2(){
+    public void updateHoursV2() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter employee ID number: ");
         String id = scanner.next();
@@ -29,7 +29,6 @@ public class EmployeeService{
     }
 
     public void updateEmployeeHoursWorked( String id ) {
-
         if (employeeRepository.getEmployees().containsKey(id)) {
             System.out.println("Enter hours worked: ");
             Scanner scanner = new Scanner(System.in);
@@ -50,4 +49,5 @@ public class EmployeeService{
             System.out.println();
         }
     }
+
 }

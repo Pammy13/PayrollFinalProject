@@ -10,18 +10,19 @@ public class EmployeeRepository{
 
     private HashMap<String, Employee> employees = new HashMap<>();
 
-    public HashMap<String, Employee> getEmployees() {return employees;
+    public HashMap<String, Employee> getEmployees() {
+        return employees;
     }
 
-    public void setEmployees(HashMap<String, Employee> employees) {
+    public void setEmployees( HashMap<String, Employee> employees ) {
         this.employees = employees;
     }
 
-    public Collection<Employee> getAllEmployees(){
+    public Collection<Employee> getAllEmployees() {
         return employees.values();
     }
 
-    public Employee getEmployee(String id) {
+    public Employee getEmployee( String id ) {
         if (employees.containsKey(id)) {
             Employee employee = employees.get(id);
             return employee;
@@ -30,9 +31,8 @@ public class EmployeeRepository{
         }
     }
 
-    public void saveEmployee(Employee employee) {
+    public void saveEmployee( Employee employee ) {
         employees.put(employee.getIdNumber(), employee);
-            }
-
+    }
 
 }
